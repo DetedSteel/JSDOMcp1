@@ -15,16 +15,18 @@ for (let i = 0; i < 6; i++){
 table.innerHTML+='<tr></tr>'
 function add(){
     if (count2 < 5){
-        let tr = table.lastElementChild
-        number = getNumber(0, 100)
-        tr.innerHTML+=`<td ${number >= 50?'class="orange"':''}>${number}</td>`
+        create()
         count2++
     } else {
         table.innerHTML+='<tr></tr>'
-        let tr = table.lastElementChild
-        number = getNumber(0, 100)
-        tr.innerHTML+=`<td ${number >= 50?'class="orange"':''}>${number}</td>`
+        create()
         count2 = 1
     }
     
+}
+
+function create(){
+    let tr = table.lastElementChild
+        number = getNumber(0, 100)
+        tr.innerHTML+=`<td ${number >= 50?'class="orange"':''}>${number}</td>`
 }
